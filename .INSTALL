@@ -1,12 +1,12 @@
 # arg 1:  the new package version
 post_install() {
     echo >> /etc/default/grub
-    echo 'for file in $(ls /etc/defaut/grub.d/); do source $file; done' >> /etc/default/grub
+    echo 'for file in $(ls /etc/default/grub.d/); do source $file; done' >> /etc/default/grub
     echo >> /etc/default/grub
 
 }
 
 # arg 1:  the old package version
 post_remove() {
-    sed 's#for file in $(ls /etc/defaut/grub.d/); do source $file; done##' -i /etc/default/grub
+    sed 's#for file in $(ls /etc/default/grub.d/); do source $file; done##' -i /etc/default/grub
 }
