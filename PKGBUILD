@@ -7,6 +7,7 @@ arch=(any)
 license=('GPL')
 depends=('grub')
 install=.INSTALL
+
 package() {
-	cp --parents -r * "$pkgdir/"
+	mkdir -p "$pkgdir/etc/default/grub.d"
 }
